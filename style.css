@@ -4,5 +4,56 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
+}
+
+:root {
+  --primary-color: #504746;
+  --secondary-color: #b89685;
+  --primary-text-color: #111;
+  --secondary-text-color: #fff;
+  --headline-color: #393939;
+  --inactive-text-color: #3939399d;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: var(--primary-color, grey);
+  padding: 5em;
+}
+
+.header__title {
+  color: var(--secondary-text-color);
+}
+
+.main {
+  background: var(--secondary-color);
+  padding: 5em;
+  display: grid;
+}
+
+.main__input {
+  background-color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.footer {
+  background: var(--primary-color, grey);
+  display: grid;
+  padding: 5em;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--secondary-text-color);
 }

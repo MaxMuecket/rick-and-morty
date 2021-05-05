@@ -2,6 +2,7 @@ import { createCharacterElement } from './components/character';
 import './style.css';
 import { createElement, removeAllChildren } from './utils/elements';
 import { getCharacters } from './utils/api';
+import { debounce } from './utils/timer';
 
 const characterSection = createElement('section', {
   className: 'results',
@@ -18,7 +19,7 @@ const headerElement = createElement('header', {
       placeholder: 'Enter name',
       className: 'header__input',
       autofocus: true,
-      oninput: (event) => {
+      oninput: debounce((event) => {
         removeAllChildren(characterSection);
 
         const search = event.target.value;
@@ -26,7 +27,7 @@ const headerElement = createElement('header', {
           const characterElements = characters.map(createCharacterElement);
           characterSection.append(...characterElements);
         });
-      },
+      }, 300),
     }),
   ],
 });

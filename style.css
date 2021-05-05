@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
 }
 
 .header {
@@ -33,13 +34,7 @@ body {
   color: var(--secondary-text-color);
 }
 
-.main {
-  background: var(--secondary-color);
-  padding: 5em;
-  display: grid;
-}
-
-.main__input {
+.header__input {
   background-color: #fff;
   opacity: 0.5;
   text-decoration: none;
@@ -47,10 +42,20 @@ body {
   text-align: center;
 }
 
+.main {
+  background: var(--secondary-color);
+  padding: 2.5em;
+  display: grid;
+}
+
+.main img {
+  height: 285px;
+}
+
 .footer {
   background: var(--primary-color, grey);
   display: grid;
-  padding: 5em;
+  padding: 3em;
 }
 
 .footer__link {

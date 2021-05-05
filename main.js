@@ -1,5 +1,28 @@
+import { createCharacterElement } from './components/character';
 import './style.css';
 import { createElement } from './utils/elements';
+
+const characters = [
+  {
+    imgSrc: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+    name: 'Rick Sanchez',
+    status: 'Alive',
+    species: 'Human',
+    origin: {
+      name: 'Earth',
+    },
+  },
+
+  {
+    imgSrc: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+    name: 'Morty Smith',
+    status: 'Alive',
+    species: 'Human',
+    origin: {
+      name: 'Earth',
+    },
+  },
+];
 
 const headerElement = createElement('header', {
   className: 'header',
@@ -10,7 +33,7 @@ const headerElement = createElement('header', {
     }),
     createElement('input', {
       placeholder: 'Enter name',
-      className: 'main__input',
+      className: 'header__input',
     }),
   ],
 });
@@ -19,8 +42,8 @@ const mainElement = createElement('main', {
   className: 'main',
   children: [
     createElement('section', {
-      innerText: 'Results',
       className: 'main__result',
+      children: characters.map(createCharacterElement),
     }),
   ],
 });

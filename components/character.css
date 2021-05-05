@@ -1,3 +1,32 @@
+:root {
+  --primary-color: #504746;
+  --secondary-color: #b89685;
+  --primary-text-color: #111;
+  --secondary-text-color: #fff;
+  --headline-color: #393939;
+  --inactive-text-color: #3939399d;
+}
+
 .character-card {
-  background: var(--background-color);
+  display: grid;
+  grid-auto-flow: column;
+  background: var(--primary-color);
+  border-radius: 0.5em;
+  grid-template-columns: auto 1fr;
+  column-gap: 1em;
+}
+
+.character-card__image {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  height: 14em;
+}
+
+.character-card__info {
+  padding: 1em;
+  display: grid;
+  justify-items: start;
+}
+.character-card__info * {
+  margin: 0;
 }

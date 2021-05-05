@@ -42,6 +42,12 @@ body {
   text-align: center;
 }
 
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1em;
+}
+
 .main {
   background: var(--secondary-color);
   padding: 2.5em;

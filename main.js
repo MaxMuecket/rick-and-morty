@@ -4,6 +4,11 @@ import { createElement, removeAllChildren } from './utils/elements';
 import { getCharacters } from './utils/api';
 import { debounce } from './utils/timer';
 
+getCharacters('').then((characters) => {
+  const characterElements = characters.map(createCharacterElement);
+  characterSection.append(...characterElements);
+});
+
 const characterSection = createElement('section', {
   className: 'results',
 });

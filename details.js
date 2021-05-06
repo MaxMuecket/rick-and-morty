@@ -1,20 +1,19 @@
 import './style.css';
-import styles from './details.moduls.css';
+import styles from './details.module.css';
 import { createElement } from './utils/elements';
 import { getCharacter } from './utils/api';
+import { createCharacterDetails } from './components/characterDetails';
 
 const params = new URLSearchParams(location.search);
 const characterId = params.get('id');
 
-getCharacter(characterId).then((response) => console.log(response));
-
-// const characterSection = createElement('section', {
-//   className: 'styles.character',
-// });
+getCharacter(characterId).then((response) => {
+  const characterDetails = createCharacterDetails(response);
+  mainElement.append(characterDetails);
+});
 
 const mainElement = createElement('main', {
   className: styles.main,
-  innerText: 'Character',
 });
 
 document.querySelector('#app').append(mainElement);

@@ -7,6 +7,8 @@ export function createCharacterElement({
   status,
   species,
   origin,
+  id,
+  type,
 }) {
   return createElement('div', {
     className: 'character-card',
@@ -15,9 +17,17 @@ export function createCharacterElement({
       createElement('article', {
         className: 'character-card__info',
         children: [
-          createElement('h2', { innerText: name }),
+          createElement('a', {
+            href: `details.html?id=${id}`,
+            children: [
+              createElement('h2', {
+                innerText: name,
+              }),
+            ],
+          }),
           createElement('p', { innerText: `${status} - ${species}` }),
           createElement('p', { innerText: origin.name }),
+          createElement('p', { innerText: type }),
         ],
       }),
     ],

@@ -47,10 +47,12 @@ body {
 
 .header__input {
   background-color: #fff;
-  opacity: 0.5;
-  text-decoration: none;
   border-radius: 1em;
   text-align: center;
+  width: 15em;
+  height: 2em;
+  font-size: 0.8em;
+  color: var(--primary-text-color);
 }
 
 .results {

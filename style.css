@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
+  background: var(--primary-color);
 }
 
 .header {

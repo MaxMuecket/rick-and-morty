@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
+  background: var(--primary-color);
 }
 
 .header {
@@ -32,6 +33,16 @@ body {
 
 .header__title {
   color: var(--secondary-text-color);
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    color: var(--primary-text-color);
+  }
+  100% {
+    color: var(--secondary-text-color);
+  }
 }
 
 .header__input {

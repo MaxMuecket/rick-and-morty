@@ -26,6 +26,7 @@
   padding: 1em;
   display: grid;
   justify-items: start;
+  color: var(--secondary-text-color);
 }
 .character-card__info * {
   margin: 0;

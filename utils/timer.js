@@ -1,9 +1,9 @@
-export function debounce(funk, duration) {
+export function debounce(func, duration) {
   let timeoutId = null;
   return (...args) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
-      funk(...args);
+      func(...args);
     }, duration);
   };
 }
